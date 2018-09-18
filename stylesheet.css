@@ -1,0 +1,81 @@
+#header-div{
+	background:#4c66b0;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	line-height: 80%;
+}
+
+.settings:hover{
+	background: #5ca8e6;
+	background-size: cover;
+}
+
+#button-area{
+	background: white;
+	color: #4c66b0;
+	overflow: hidden;
+}
+
+#main-content{
+	width: 30%;
+	color:white;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+#newColorsBtn{
+	margin-right: 20%;
+}
+
+.colorBtn{
+	width: 30%;
+	padding-top: 30%;
+	margin-right: 2.33%;
+	background: white;
+	float:left;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+body{
+	text-align:center;
+	margin: 0 auto;
+	text-transform:uppercase;
+	background: black;
+}
+
+h3{
+	text-align: center;
+}
+
+#directions{
+	color:white;
+	float: left;
+	text-align: left;
+	width: 20%;
+}
+
+#color1{
+
+}
+
+#color2{
+	
+}
+
+#color3{
+	
+}
+
+#color4{
+	
+}
+
+#color5{
+	
+}
+
+#color6{
+	
+}

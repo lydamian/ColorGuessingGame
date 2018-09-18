@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Guessing Game</title>
+	<link type="text/css" rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<!-- Header -->
+<div id="header-div">
+	<h3>THE GREAT</h3>
+	<h1><span id="rgbColor">(175,203,2)</span></h1>
+	<h3>Guessing Game</h3>
+</div>
+
+<!-- nEW colors AND EASY/HARD BUTTONS -->
+<div id="button-area">
+	<span id="newColorsBtn" class="settings">New Colors</span>
+	<span id="easyBtn" class="settings">Easy</span>
+	<span id="hardBtn" class="settings">Hard</span>
+</div>
+
+
+<!-- Directions -->
+<div id="directions">
+	<h3> Directions </h3>
+	<ol>
+		<li> Given the RGB value in the header guess the correct color</li>
+		<li> When the correct color has been guessed select easy or hard mode and press new colors for a new game.
+	</ol>
+</div>
+
+<!-- Dynamic Color Content -->
+<div id="main-content">
+	<div class="colorBtn" id="color1"></div>
+	<div class="colorBtn" id="color2"></div>
+	<div class="colorBtn" id="color3"></div>
+	<div class="colorBtn" id="color4"></div>
+	<div class="colorBtn" id="color5"></div>
+	<div class="colorBtn" id="color6"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
