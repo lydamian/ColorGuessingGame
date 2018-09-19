@@ -4,6 +4,7 @@ console.log("script.js page loaded...\n");
 var newColorBtn = document.getElementById("newColorsBtn");
 var easyBtn = document.getElementById("easyBtn");
 var hardBtn = document.getElementById("hardBtn");
+var pickResult = document.getElementById("pickResult");
 
 //States
 var IS_HARD = true;
@@ -62,6 +63,7 @@ function squareEvent(){
 		if(this.style.background == RGB_GOAL){
 			//success, turn every color into this color, game over.
 			console.log("correct");
+			pickResult.textContent = "You got it!";
 			for(var i = 0; i < myBtns.length; i++){
 				myBtns[i].style.background = RGB_GOAL;
 			}	
@@ -69,6 +71,7 @@ function squareEvent(){
 			RGB_GOAL = undefined;
 		}
 		else{
+			pickResult.textContent = "Try Again";
 			//incorrect, erase square
 			console.log("incorrect");
 			this.style.background = "black";
@@ -94,6 +97,7 @@ function pickRGBIndex(){
 //event listeners
 newColorBtn.addEventListener("click", function(){
 	console.log("newColorsBtn clicked...\n");
+	pickResult.textContent = undefined;
 	if(IS_HARD){
 		hardGame();
 	}

@@ -6,15 +6,24 @@
 	line-height: 80%;
 }
 
+.settings{
+	position: static;
+}
+
 .settings:hover{
 	background: #5ca8e6;
-	background-size: cover;
 }
 
 #button-area{
 	background: white;
 	color: #4c66b0;
 	overflow: hidden;
+}
+
+#pickResult{
+	margin-right: 7%;
+	text-align: center;
+	color: black;
 }
 
 #main-content{
@@ -25,7 +34,7 @@
 }
 
 #newColorsBtn{
-	margin-right: 20%;
+ 	margin-right: 7%;
 }
 
 .colorBtn{
