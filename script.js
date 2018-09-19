@@ -66,6 +66,7 @@ function squareEvent(){
 			pickResult.textContent = "You got it!";
 			for(var i = 0; i < myBtns.length; i++){
 				myBtns[i].style.background = RGB_GOAL;
+				myBtns[i].removeEventListener("click", squareEvent);
 			}	
 
 			RGB_GOAL = undefined;
