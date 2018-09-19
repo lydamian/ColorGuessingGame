@@ -98,12 +98,18 @@ function pickRGBIndex(){
 //event listeners
 newColorBtn.addEventListener("click", function(){
 	console.log("newColorsBtn clicked...\n");
-	pickResult.textContent = undefined;
+	pickResult.textContent = "";
 	if(IS_HARD){
 		hardGame();
+		for(var i = 0; i < HARD_MAX; i++){
+			myBtns[i].addEventListener("click", squareEvent);
+		}
 	}
 	else{
 		easyGame();
+		for(var i = 0; i < EASY_MAX; i++){
+			myBtns[i].addEventListener("click", squareEvent);
+		}
 	}
 	//selecting the RGB Goal and setting the header
 	var squareNum = pickRGBIndex();
