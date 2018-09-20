@@ -57,6 +57,11 @@ function hardGame(){
 	}
 }
 
+function mouseoutEvent(){
+	console.log("mouseout event called...\n");
+	this.style.backgroundColor = "white";
+}
+
 
 //===== square button event callback ======
 function squareEvent(){
@@ -128,14 +133,14 @@ easyBtn.addEventListener("click", function(){
 hardBtn.addEventListener("click", function(){
 	console.log("hardBtn clicked...\n");
 	IS_HARD = true;
-	document.getElementById("hardBtn").style.background = "#9ca9e3";
+	document.getElementById("hardBtn").style.background = "rgb(156, 169, 227";
 	document.getElementById("easyBtn").style.background = "white";
 });
 
 
 // Script to load when the page loads.
 IS_HARD = true;
-document.getElementById("hardBtn").style.background = "#9ca9e3";
+document.getElementById("hardBtn").style.background = "rgb(156, 169, 227";
 hardGame();
 var squareNum = pickRGBIndex();
 RGB_GOAL = document.getElementById("color" + squareNum).style.background;
@@ -145,5 +150,32 @@ console.log("RGBGoal is: " + RGB_GOAL);
 //Adding event listener to buttons
 for(var i = 0; i < HARD_MAX; i++){
 	myBtns[i].addEventListener("click", squareEvent);
+}
+
+var settingBtns = document.getElementsByClassName("settings");
+console.log(settingBtns);
+for(var i = 1; i < settingBtns.length; i++){
+	settingBtns[i].addEventListener("mouseover", function() {
+		console.log("onmouseover event called...\n");
+
+		console.log(this.style.backgroundColor);
+
+		if(this.style.backgroundColor == "rgb(156, 169, 227)"){
+			console.log("this is a active element");
+		}
+    	else{this.style.backgroundColor !== "rgb(156, 169, 227"
+    		this.style.backgroundColor = "#ABCDEF";
+			this.addEventListener("mouseout", mouseoutEvent);
+    	}
+	});
+
+}
+
+for(var i = 1; i < settingBtns.length; i++){
+	settingBtns[i].addEventListener("click", function() {
+		console.log("click event called...\n");
+    	this.style.backgroundColor = "#9ca9e3";
+    	this.removeEventListener("mouseout", mouseoutEvent)
+	});
 }
 
