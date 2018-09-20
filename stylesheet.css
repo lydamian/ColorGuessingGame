@@ -14,6 +14,10 @@
 	background: #5ca8e6;
 }
 
+span{
+	padding: 3px;
+}
+
 #button-area{
 	background: white;
 	color: #4c66b0;
